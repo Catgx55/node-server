@@ -1,5 +1,5 @@
 const readline = require('readline');
-const {printTask, addTasks, deleteTasks, completedTask} = require('./tasksList')
+const {printTask, addTasks, deleteTasks, /*completedTask,*/ taskCompleted} = require('./tasksList')
 
 
 const rl = readline.createInterface({
@@ -25,7 +25,8 @@ function handleInput(input){
             break;
         case 'completar':
             const indexToComplete = parseInt(args[1] - 1);
-            completedTask(indexToComplete);
+            //completedTask(indexToComplete);
+            taskCompleted(indexToComplete);
             break;
         case 'salir':
             rl.close();
